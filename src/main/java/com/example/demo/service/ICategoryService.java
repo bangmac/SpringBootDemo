@@ -1,4 +1,9 @@
-package com.example.demo;
+package com.example.demo.service;
 
-public interface ICategory {
+import com.example.demo.model.Category;
+
+import java.util.List;
+
+public interface ICategoryService {
+    List<Category> findByAll();
 }

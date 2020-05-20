@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Ten</td>
+    </tr>
+    <!--/*@thymesVar id="categories" type="com.example"*/-->
+    <tr th:each="a: ${categories}">
+        <td th:text="${category.id}"></td>
+        <!--/* Workaround for bug https://youtrack.jetbrains.com/issue/IDEA-132738 -->
+        <!--@thymesVar id="post" type="your.package.Post"-->
+        <!--@thymesVar id="title" type="String"-->
+        <!--@thymesVar id="content" type="String"-->
+        <!--*/-->
+        <td th:text="${category.name}"></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
